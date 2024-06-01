@@ -10,7 +10,7 @@
 
 body {
   background: #f3f5f9;
-  background-image: url("nsbe_icon_trans.png");
+  background-image: url("msu_horse_logo_trans3.png");
   background-repeat: no-repeat;
   background-position: 60% -30%;
   background-size: 500px 500px;
@@ -52,7 +52,6 @@ body {
 .sidebar > .sidebar-header img {
   width: 60px;
   height: 60px;
-  border-radius: 50%;
 }
 
 .sidebar ul > li {
