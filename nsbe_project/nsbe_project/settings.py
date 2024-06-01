@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Admin Details:
+# Username: DavidMbagwu
+# Email: davidmbagwu2359@gmail.com
+# Password: june262005
+
 
 # Application definition
 

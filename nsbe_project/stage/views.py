@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Member
 
 # Create your views here.
 def index(request):
@@ -21,4 +22,8 @@ def points(request):
     return render(request, 'stage/points.html')
 
 def profile(request):
-    return render(request, 'stage/profile.html')
+    all_users = Member.objects.all()
+    return render(request, 'stage/profile.html', {'all': all_users})
+
+def login(request):
+    return render(request, 'stage/login.html')
