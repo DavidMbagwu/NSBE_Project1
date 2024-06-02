@@ -27,3 +27,6 @@ def profile(request):
 
 def login(request):
     return render(request, 'stage/login.html')
+
+def signup(request):
+    return render(request, 'stage/signup.html')
