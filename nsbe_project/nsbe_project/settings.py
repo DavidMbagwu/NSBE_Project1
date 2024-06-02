@@ -32,6 +32,10 @@ ALLOWED_HOSTS = []
 # Email: davidmbagwu2359@gmail.com
 # Password: june262005
 
+#username = 'Dubem'
+#email = 'dakukwe@mcneese.edu'
+#password = 'DDD45excel'
+
 
 # Application definition
 
