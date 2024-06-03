@@ -33,7 +33,6 @@ ALLOWED_HOSTS = []
 # Password: june262005
 
 #username = 'Dubem'
-#email = 'dakukwe@mcneese.edu'
 #password = 'DDD45excel'
 
 
