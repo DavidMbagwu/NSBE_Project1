@@ -1,4 +1,11 @@
 {% extends "stage/base.html" %}
 {% block name %}
-<h1>Home Page</h1>
+
+{%  for item in all %}
+
+<h1>Hey, {{ item.fname }}! 👋</h1>
+
+{% endfor %}
+
+
 {% endblock name %}
