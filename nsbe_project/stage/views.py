@@ -3,7 +3,8 @@ from .models import Member
 
 # Create your views here.
 def index(request):
-    return render(request, 'stage/index.html')
+    all_users = Member.objects.all()
+    return render(request, 'stage/index.html', {'all': all_users})
 
 
 def about(request):
