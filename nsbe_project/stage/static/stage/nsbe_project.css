@@ -21,6 +21,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  flex-direction: column;
 }
 
 .list {
