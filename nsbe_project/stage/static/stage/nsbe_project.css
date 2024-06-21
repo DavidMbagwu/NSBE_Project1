@@ -12,8 +12,9 @@ body {
   background: #f3f5f9;
   background-image: url("msu_horse_logo_trans3.png");
   background-repeat: no-repeat;
-  background-position: 60% -30%;
-  background-size: 500px 500px;
+  background-position: 60% 20%;
+  background-size: 600px 600px;
+  background-attachment: fixed;
 }
 
 .wrapper {
@@ -21,7 +22,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  flex-direction: column;
 }
 
 .list {
@@ -51,8 +51,8 @@ body {
           align-items: center;
 }
 .sidebar > .sidebar-header img {
-  width: 60px;
-  height: 60px;
+  width: 140px;
+  height: 40px;
 }
 
 .sidebar ul > li {
@@ -85,6 +85,10 @@ body {
 }
 
 .sidebar ul > li > div > a {
+  color: black;
+}
+
+.sidebar ul > li > a {
   color: black;
 }
 
