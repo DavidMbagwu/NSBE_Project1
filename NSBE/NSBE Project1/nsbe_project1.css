@@ -89,6 +89,10 @@ body {
   color: black;
 }
 
+.sidebar ul > li > a {
+  color: black;
+}
+
 .sidebar ul > li > div > span > img {
   width: auto;
   height: 20px;
