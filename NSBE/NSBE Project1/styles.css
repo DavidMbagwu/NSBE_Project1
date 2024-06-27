@@ -1,14 +1,24 @@
-div{
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+  }
 
 body{
+    display:flex;
     justify-content: center;
     align-items: center;
-    background: white;
+    min-height: 100vh; 
+    background: #f3f5f9;
+    background-image: url(MSUHorseRider_blue.png);
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+    background-size: 600px 600px;
     
 }
 
@@ -17,10 +27,13 @@ body{
     height: 100%;
     margin: auto;
     padding: 10px;
-    background-color: rgb(23, 172, 217);
-    border-radius: 3px;
-    color:rgb(41, 22, 145);
+    background-color: white;
+    /* border-radius: 3px;
+    color:rgb(41, 22, 145); */
+}
 
+.input-box{
+    color: black;
 }
 
 h1{
@@ -28,11 +41,11 @@ h1{
     color: rgb(1, 1, 10);
 }
 
-h2, h3{
+/* h2, h3{
     text-align: left;
     font-size: 15px;
     color: rgb(1, 1, 10);
-}
+} */
 
 form{
     width: 300px;
@@ -52,6 +65,11 @@ form input {
     border: 1px solid rgb(248, 234, 49) ;
     border-radius: 50px;
 }
+
+form input::placeholder {
+    color: black;
+}
+
 
 input[type="button"]{
     width: 300px;
@@ -82,12 +100,12 @@ input[type="checkbox"]{
 }
 
 .dropdown button{
-    width: 300px;
+    width: 290px;
     margin-left: 8px;
     margin-top: 20px;
-    border-radius: 50px;
-    background-color: rgb(248, 234, 49);
-    color: rgb(99, 87, 96);
+    /* border-radius: 50px; */
+    background-color: #0818A8;	
+    color: #ffd700;
     font-size: 15px;
     padding:10px 15px ;
     cursor: pointer;
@@ -99,22 +117,31 @@ input[type="checkbox"]{
    padding: 10px 15px;
 
 }
+
+.dropdown i{
+    transform: translateX(90%);
+    color: white;
+    font-size: 10px;
+}
+
 .dropdown .content{
     display: none;
     position: absolute;
-    background-color: rgb(238, 224, 206);
-    min-width: 100px;
+    background-color: white;
+    min-width: 286px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left: 10px;
 
 }
 .dropdown:hover .content{
     display: block;
 }
 .dropdown:hover button{
-    background-color: rgb(224, 197, 163);
+    background-color: white;
+    border-color: #0818A8;
 }
 .dropdown a:hover{
-    background-color: rgb(228, 207, 179);
+    background-color: #0437F2;
 }
 
 
