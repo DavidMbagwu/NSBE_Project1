@@ -175,7 +175,7 @@ body{
     background: #fff;
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid rgb(157, 157, 157);
+    border: 1px solid rgb(0, 157, 255);
     margin-right: 10px;
 }
 
@@ -218,7 +218,10 @@ body{
 }
 
 .content_right_socials > a > i:hover{
-    color: #918f8f;
     transform: scale(1.5);
     font-size: 35px;
+}
+
+.IG > i:hover{
+    color: #6228d7;
 }
