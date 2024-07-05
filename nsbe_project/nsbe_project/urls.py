@@ -14,10 +14,19 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path, include
+from stage.views import ChangePassword
+from django.contrib.auth import views as auth_views
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('stage/', include('stage.urls'))
-]
+urlpatterns = [path("admin/", admin.site.urls), 
+               path("stage/", include("stage.urls")),
+               path('change-password/', ChangePassword.as_view(), name='stage-change-password'),
+               path('change-password-confirm/<uidb64>/<token>/',
+         auth_views.PasswordResetConfirmView.as_view(template_name='stage/change_password_confirm.html'),
+         name='stage-change-password-confirm'),
+        path('change-password-complete/',
+         auth_views.PasswordResetCompleteView.as_view(template_name='stage/change_password_complete.html'),
+         name='stage-change-password-complete'),
+               ]
