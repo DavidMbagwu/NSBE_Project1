@@ -130,9 +130,3 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# Authentication user model(because we inherited from django.models.AbstractUser)
-AUTH_USER_MODEL = 'stage.Member'
-
-# So that users will be redirected here on logout
-LOGOUT_REDIRECT_URL = 'login/'
