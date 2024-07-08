@@ -170,11 +170,13 @@ body{
     left: 50%;
     transform: translateX(-50%);
     margin-top: 15px;
+    border: 1px solid black;
 }
 
 footer a:hover{
     padding: 15px;
     background: #1434A4;
-    border-radius: 20px;   
+    border-radius: 20px;
+    color: #FFD700;   
     
 }
