@@ -37,6 +37,9 @@ def login(request):
 def signup(request):
     return render(request, 'stage/signup.html')
 
+def gallery(request):
+    return render(request, 'stage/gallery.html')
+
 def adminOnly(request):
     context = {
         'posts': Post.objects.all(),
