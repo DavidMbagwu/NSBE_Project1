@@ -10,5 +10,6 @@ urlpatterns = [
     path('help/', views.help, name='stage-help'),
     path('points/', views.points, name='stage-points'),
     path('profile/', views.profile, name='stage-profile'),
-    path('login/', views.login, name='stage-login')
+    path('login/', views.login, name='stage-login'),
+    path('adminOnly/', views.adminOnly, name='stage-adminOnly'),
 ]

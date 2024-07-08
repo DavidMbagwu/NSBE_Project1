@@ -28,8 +28,6 @@ body{
     margin: auto;
     padding: 10px;
     background-color: white;
-    /* border-radius: 3px;
-    color:rgb(41, 22, 145); */
 }
 
 .input-box{
@@ -143,6 +141,3 @@ input[type="checkbox"]{
 .dropdown a:hover{
     background-color: #0437F2;
 }
-
-
-

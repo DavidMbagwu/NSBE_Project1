@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Member
+from .models import Post
 
 # Create your views here.
 def index(request):
@@ -20,7 +21,11 @@ def help(request):
     return render(request, 'stage/help.html')
 
 def points(request):
-    return render(request, 'stage/points.html')
+    context = {
+        'posts': Post.objects.all(),
+        'members': Member.objects.all(),
+    }
+    return render(request, 'stage/points.html', context)
 
 def profile(request):
     all_users = Member.objects.all()
@@ -31,3 +36,9 @@ def login(request):
 
 def signup(request):
     return render(request, 'stage/signup.html')
+
+def adminOnly(request):
+    context = {
+        'posts': Post.objects.all(),
+    }
+    return render(request, 'stage/adminOnly.html', context)
