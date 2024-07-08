@@ -4,6 +4,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale = 1.0" charset="UTF-8" />
     <link rel="stylesheet" type="text/css"  href="{% static 'stage/nsbe_project.css' %}">
+    {% block style %}
+    {% endblock style%}
     <title>NSBE Project1</title>
 
 </head>
@@ -13,28 +15,28 @@
         <div class="sidebar">
 
             <div class="sidebar-header">
-                <span><img src="{% static 'stage/nsbe5g.png' %}" alt="mcneese_icon"></span>
+                <span><img src="{% static 'stage/logo/nsbe5g.png' %}" alt="mcneese_icon"></span>
             </div>
 
             <ul class="list">
                 <li><div>
-                    <span><img src="{% static 'stage/home_icon.png' %}" alt="home_button"></span>
+                    <span><img src="{% static 'stage/logo/home_icon.png' %}" alt="home_button"></span>
                     <a href="{%  url 'stage-index' %}">Home</a>
                 </div></li>
                 <li><div>
-                    <span><img src="{% static 'stage/folder_icon.png' %}" alt="directory_button"></span>
+                    <span><img src="{% static 'stage/logo/folder_icon.png' %}" alt="directory_button"></span>
                     <a href="{%  url 'stage-directory' %}">Directory</a>
                 </div></li>
                 <li><div>
-                    <span><img src="{% static 'stage/ribbon_icon.png' %}" alt="points_button"></span>
+                    <span><img src="{% static 'stage/logo/ribbon_icon.png' %}" alt="points_button"></span>
                     <a href="{%  url 'stage-points' %}">Points</a>
                 </div></li>
                 <li><div>
-                    <span><img src="{% static 'stage/calender_icon.png' %}" alt="events_button"></span>
+                    <span><img src="{% static 'stage/logo/calender_icon.png' %}" alt="events_button"></span>
                     <a href="{%  url 'stage-events' %}">Events</a>
                 </div></li>
                 <li><div>
-                    <span><img src="{% static 'stage/profile_icon.png' %}" alt="profile_button"></span>
+                    <span><img src="{% static 'stage/logo/profile_icon.png' %}" alt="profile_button"></span>
                     <a href="{%  url 'stage-profile' %}">Profile</a>
                 </div></li>
                 
@@ -43,7 +45,7 @@
                 <ul class="bottom_list">
                     <li>
                         <div>
-                            <span><img src="{% static 'stage/log_out.png' %}" alt="log_out_button"></span>
+                            <span><img src="{% static 'stage/logo/log_out.png' %}" alt="log_out_button"></span>
                             <a href="#">Log Out</a>
                         </div>
                     </li>
@@ -53,9 +55,10 @@
 
         </div>
         <div class="content">
+            <h2 style="font-size: larger; text-decoration: solid; color: blueviolet;">This is a test: NSBE</h2>
             {% block name %}
             {% endblock name %}
-            <h2 style="font-size: larger; text-decoration: solid; color: blueviolet;">This is a test: NSBE</h2>
+            
             
         </div>
     </div>
