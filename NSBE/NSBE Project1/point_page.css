@@ -51,10 +51,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+
 .sidebar > .sidebar-header img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  width: 140px;
+  height: 40px;
 }
 
 .sidebar ul > li {
@@ -136,7 +136,7 @@ body {
     background: #fff;
     padding: 30px;
     border-radius: 20px;
-    border: 1px solid blueviolet;
+    border: 2px solid rgb(243, 245, 249);
     margin-left: 5px;
     margin-right: 15px;
   }
@@ -178,7 +178,7 @@ body {
 
   .history{
     padding: 30px;
-    border: 1px solid blueviolet;
+    border: 2px solid rgb(243, 245, 249);
     padding-top: 20px;
     font-size: larger;
   }

@@ -11,5 +11,6 @@ urlpatterns = [
     path('points/', views.points, name='stage-points'),
     path('profile/', views.profile, name='stage-profile'),
     path('gallery/', views.gallery, name='stage-gallery'),
-    path('login/', views.login, name='stage-login')
+    path('login/', views.login, name='stage-login'),
+    path('adminOnly/', views.adminOnly, name='stage-adminOnly'),
 ]
