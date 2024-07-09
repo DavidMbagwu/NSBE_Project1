@@ -1,0 +1,171 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0" charset="UTF-8" />
+    <link rel="stylesheet" type="text/css"  href="{% static 'stage/point_page.css'%}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>NSBE Project1</title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+
+            <div class="sidebar-header">
+                <span><img src="{% static 'stage/nsbe5g.png' %}" alt="mcneese_icon"></span>
+            </div>
+
+            <ul class="list">
+                <li><div>
+                    <span><img src="{% static 'stage/home_icon.png' %}" alt="home_button"></span>
+                    <a href="{%  url 'stage-index' %}">Home</a>
+                </div></li>
+                <li><div>
+                    <span><img src="{% static 'stage/folder_icon.png' %}" alt="directory_button"></span>
+                    <a href="{%  url 'stage-directory' %}">Directory</a>
+                </div></li>
+                <li><div>
+                    <span><img src="{% static 'stage/ribbon_icon.png' %}" alt="points_button"></span>
+                    <a href="{%  url 'stage-points' %}">Points</a>
+                </div></li>
+                <li><div>
+                    <span><img src="{% static 'stage/calender_icon.png' %}" alt="events_button"></span>
+                    <a href="{%  url 'stage-events' %}">Events</a>
+                </div></li>
+                <li><div>
+                    <span><img src="{% static 'stage/profile_icon.png' %}" alt="profile_button"></span>
+                    <a href="{%  url 'stage-profile' %}">Profile</a>
+                </div></li>
+                
+            </ul>
+
+                <ul class="bottom_list">
+                    <li>
+                        <div>
+                            <span><img src="{% static 'stage/log_out.png' %}" alt="log_out_button"></span>
+                            <a href="#">Log Out</a>
+                        </div>
+                    </li>
+                    <li><a href="{%  url 'stage-help' %}">Help</a></li>
+                    <li><a href="{%  url 'stage-about' %}">About</a></li>
+                </ul>
+
+        </div>
+        <div class = "content">
+            <h1>Points <i class='bx bx-trophy' style='color:#ffd700'  ></i> </h1>
+            <div class = "allbox">    
+                <div class="box1">
+                    <h2> Total Point Earned</h2>
+                    <div class="number">
+                        <p>45</p>
+                    </div>
+                </div>
+                <div class="box2">
+                    <h2> Total Events Attended</h2>
+                    <div class="number">
+                        <p>3</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="activity">
+                <div class = "history"> 
+                    <h1>  Event History<span><i class='bx bx-history'></i></span></h1>
+                    <div class = "containevent">
+                        {% for post in posts %}
+                            <div class="event1">
+                                {% if post.points < 10 %}
+                                    <h2 style = "color:green; font-size: 35px"> &nbsp;+{{ post.points }} </h2>
+                                {% else %}
+                                    <h2 style = "color:green; font-size: 35px"> +{{ post.points }} </h2>
+                                {% endif %}
+                                <h2 style = "color:black; font-size: 15px"> {{ post.date_event|date:"F d, Y" }} <br>You attended {{ post.event }} </h2>
+                                
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="subBody">
+                    <div class="table ">
+                        <section class = "table_header">
+                            <h1 style="font-size: larger; text-decoration: solid; color: green; transform: translateY(70%)"> Points Ranking </h1>
+                            
+                        </section>
+                        <section class = "table_body">
+                            <table>
+                                <!-- <thead>
+                                    <tr>
+                                        <th>id</th>
+                                        <th>Name</th>
+                                        <th>Points</th>
+                                    </tr>
+                                </thead>  -->
+                                <tbody>
+                                    {% for user in members %}
+                                    <tr>
+                                        <td> {{ forloop.counter }} </td>
+                                        <td><img src = "{% static 'stage/mcneese_icon.png'%}" alt =""> {{user.fname}} </td>
+                                        <td style = "font-size:large; text-decoration:solid; color: green;" > {{user.pointsum}} </td>
+                                    </tr>
+                                    {% endfor %}
+                                    <!-- <tr>
+                                        <td> 2</td>
+                                        <td><img src = "{% static 'stage/MSU HorseRider color.jpg'%}" alt =""> David</td>
+                                        <td style = "font-size:large; text-decoration:solid; color: green;" > 100 points </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 3</td>
+                                        <td><img src = "{% static 'stage/nsbe_icon.png'%}" alt =""> Rose</td>
+                                        <td style = "font-size:large; text-decoration:solid; color: green;" > 100 points </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 4</td>
+                                        <td><img src = "{% static 'stage/mcneese_icon.png'%}" alt =""> Pacific</td>
+                                        <td style = "font-size:large; text-decoration:solid; color: green;" > 100 points </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 5</td>
+                                        <td><img src = "{% static 'stage/mcneese_icon.png'%}" alt =""> Extra</td>
+                                        <td style = "font-size:large; text-decoration:solid; color: green;" > 100 points </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 6</td>
+                                        <td><img src = "{% static 'stage/mcneese_icon.png'%}" alt =""> Extra</td>
+                                        <td style = "font-size:large; text-decoration:solid; color: green;" > 100 points </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 7</td>
+                                        <td><img src = "{% static 'stage/mcneese_icon.png'%}" alt =""> Extra</td>
+                                        <td style = "font-size:large; text-decoration:solid; color: green;" > 100 points</td>
+                                    </tr>
+                                    <tr>
+                                        <td> 8</td>
+                                        <td><img src = "{% static 'stage/mcneese_icon.png'%}" alt =""> Extra</td>
+                                        <td style = "font-size:large; text-decoration:solid; color: green;" > 100 points</td>
+                                    </tr>
+                                    <tr>
+                                        <td> 9</td>
+                                        <td><img src = "{% static 'stage/mcneese_icon.png'%}" alt =""> Extra</td>
+                                        <td style = "font-size:large; text-decoration:solid; color: green;" > 100 points</td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                        </section>
+                    </div>
+                </div>
+                
+            </div>
+
+                 
+
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
